@@ -121,6 +121,11 @@ namespace ThePornDB.Providers
             result.Item.Name = sceneData.Title;
             result.Item.Overview = sceneData.Description;
 
+            if (sceneData.Rating > 0)
+            {
+                result.Item.CommunityRating = sceneData.Rating;
+            }
+
             if (Plugin.Instance.Configuration.StudioStyle == StudioStyle.All || Plugin.Instance.Configuration.StudioStyle == StudioStyle.Site)
             {
                 result.Item.AddStudio(sceneData.Site.Name);
