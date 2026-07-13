@@ -311,19 +311,22 @@ namespace ThePornDB.Providers
 
             var images = new List<(ImageType Type, string Url)>()
             {
+                (ImageType.Backdrop, sceneData.Background.Full),
                 (ImageType.Backdrop, sceneData.Background.Large),
+                (ImageType.Backdrop, sceneData.BackgroundBack.Full),
                 (ImageType.Backdrop, sceneData.BackgroundBack.Large),
                 (ImageType.Logo, sceneData.Site.Logo),
+                (ImageType.Thumb, sceneData.Image),
             };
 
             string primary = null;
             switch (Plugin.Instance.Configuration.ScenesImage)
             {
                 case ScenesImageStyle.Poster:
-                    primary = sceneData.Posters.Large;
+                    primary = sceneData.Poster;
                     break;
                 case ScenesImageStyle.Background:
-                    primary = sceneData.Background.Large;
+                    primary = sceneData.Background.Full;
                     break;
             }
 
