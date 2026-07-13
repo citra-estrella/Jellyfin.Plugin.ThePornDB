@@ -39,6 +39,9 @@ namespace ThePornDB.Models
         [JsonProperty(PropertyName = "tags")]
         public List<Tags> Tags { get; set; }
 
+        [JsonProperty(PropertyName = "image")]
+        public string Image { get; set; }
+        
         [JsonProperty(PropertyName = "poster")]
         public string Poster { get; set; }
 
