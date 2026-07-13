@@ -41,7 +41,7 @@ namespace ThePornDB.Models
 
         [JsonProperty(PropertyName = "image")]
         public string Image { get; set; }
-        
+
         [JsonProperty(PropertyName = "poster")]
         public string Poster { get; set; }
 
